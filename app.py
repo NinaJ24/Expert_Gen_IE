@@ -45,7 +45,8 @@ PINECONE_ENV = os.getenv('us-east1-gcp')
 # pinecone.init(api_key=PINECONE_API_KEY, environment=PINECONE_ENV)
 pinecone_instance = pinecone.Pinecone(api_key=PINECONE_API_KEY, environment="us-east1-gcp")
 # Pinecone 的索引名称
-index_name = "ce322module2"
+# index_name = "ce322module2"
+index_name = "tryexpert1021final"
 
 # 初始化嵌入模型和向量存储
 # embeddings = OpenAIEmbeddings(model="text-embedding-ada-002")
