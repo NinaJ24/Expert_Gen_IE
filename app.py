@@ -22,8 +22,9 @@ import logging    # 导入 logging 模块
 # st.markdown(background_css, unsafe_allow_html=True)
 # 加载环境变量
 load_dotenv()
-# OPENAI_API_KEY = "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"
-# OPENAI_API_KEY = "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"
+PINECONE_API_KEY = os.getenv('PINECONE_API_KEY')
+PINECONE_ENV = os.getenv('PINECONE_ENV')
+# OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 
 # OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 # PINECONE_API_KEY = os.getenv('PINECONE_API_KEY')
