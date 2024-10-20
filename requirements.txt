@@ -1,0 +1,15 @@
+python-dotenv
+langchain
+openai
+pinecone-client
+unstructured
+tabulate
+pdf2image
+streamlit
+tiktoken
+langchain_community
+langchain_pinecone
+langchain_openai
+unstructured 
+langchain-text-splitters
+pinecone-client

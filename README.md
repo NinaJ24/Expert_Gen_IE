@@ -1,2 +1,2 @@
-# Expert_Gen_1021_try
-this is the code for expertgen app
+# Chatbot-using-ChatGPT-and-Pinecone
+This is a chatbot using ChatGPT and Pinecone.
