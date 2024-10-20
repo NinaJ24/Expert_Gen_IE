@@ -24,8 +24,7 @@ import logging    # 导入 logging 模块
 load_dotenv()
 # OPENAI_API_KEY = "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"
 # OPENAI_API_KEY = "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"
-OPENAI_API_KEY = "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"
-PINECONE_API_KEY = '4f4a45d8-d09e-4e12-b1b2-0ab0fba4a851'
+
 # OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 # PINECONE_API_KEY = os.getenv('PINECONE_API_KEY')
 PINECONE_ENV = os.getenv('us-east1-gcp')
