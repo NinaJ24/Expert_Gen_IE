@@ -11,10 +11,10 @@ from langchain.chat_models import ChatOpenAI
 from dotenv import load_dotenv
 import threading  # 导入 threading 模块
 import logging    # 导入 logging 模块
-headers = {
-    "authorization": st.secrets["auth_token"],
-    "content-type": "application/json"
-}
+# headers = {
+#     "authorization": st.secrets["auth_token"],
+#     "content-type": "application/json"
+# }
 # 插入自定义CSS来修改背景颜色（#6495ED 透明度 69%）
 # background_css = """
 # <style>
