@@ -57,18 +57,40 @@ for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
 
-# Accept user input
+# # Accept user input
+# if prompt := st.chat_input("Ask your query about civil engineering"):
+#     # Add user message to chat history
+#     st.session_state.messages.append({"role": "user", "content": prompt})
+#     # Display user message in chat message container
+#     with st.chat_message("user"):
+#         st.markdown(prompt)
+#     answer = get_response_content(prompt)
+#     # Display assistant response in chat message container
+#     with st.chat_message("assistant"):
+#         # response = st.write_stream(response_generator())
+#         st.markdown(answer)
+#     # Add assistant response to chat history
+#     # st.session_state.messages.append({"role": "assistant", "content": response})
+#     st.session_state.messages.append({"role": "assistant", "content": answer})
+
 if prompt := st.chat_input("Ask your query about civil engineering"):
     # Add user message to chat history
     st.session_state.messages.append({"role": "user", "content": prompt})
+
     # Display user message in chat message container
     with st.chat_message("user"):
         st.markdown(prompt)
-    answer = get_response_content(prompt)
-    # Display assistant response in chat message container
+
+    # Display "I am thinking..." placeholder in assistant's response
     with st.chat_message("assistant"):
-        # response = st.write_stream(response_generator())
-        st.markdown(answer)
+        thinking_placeholder = st.empty()
+        thinking_placeholder.markdown("I am thinking...")
+
+    # Generate actual response
+    answer = get_response_content(prompt)
+
+    # Update the placeholder with the actual response
+    thinking_placeholder.markdown(answer)
+
     # Add assistant response to chat history
-    # st.session_state.messages.append({"role": "assistant", "content": response})
     st.session_state.messages.append({"role": "assistant", "content": answer})
