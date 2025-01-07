@@ -58,7 +58,7 @@ for message in st.session_state.messages:
         st.markdown(message["content"])
 
 # # Accept user input
-# if prompt := st.chat_input("Ask your query about civil engineering"):
+# if prompt := st.chat_input("Ask your query about human factors, safety engineering, and applied ergonomics. "):
 #     # Add user message to chat history
 #     st.session_state.messages.append({"role": "user", "content": prompt})
 #     # Display user message in chat message container
@@ -73,11 +73,12 @@ for message in st.session_state.messages:
 #     # st.session_state.messages.append({"role": "assistant", "content": response})
 #     st.session_state.messages.append({"role": "assistant", "content": answer})
 
-if prompt := st.chat_input("Ask your query about civil engineering"):
+if prompt := st.chat_input("Ask your query about human factors, safety engineering, and applied ergonomics."):
     # Add user message to chat history
     # st.session_state.messages.append({"role": "user", "content": prompt})
     # 在用户输入后附加内容
-    enhanced_prompt = f"{prompt} Provide cited source text if available."
+    # enhanced_prompt = f"{prompt} Provide cited source text if available."
+    enhanced_prompt = f"{prompt} Also provide me the source cited text"
     
     # 将增强后的输入加入聊天记录
     st.session_state.messages.append({"role": "user", "content": enhanced_prompt})
