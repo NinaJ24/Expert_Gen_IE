@@ -1,7 +1,7 @@
 python-dotenv
 langchain
 openai
-pinecone-client
+pinecone
 unstructured
 tabulate
 pdf2image
@@ -12,5 +12,5 @@ langchain_pinecone
 langchain_openai
 unstructured 
 langchain-text-splitters
-pinecone-client
+pinecone
 pinecone-plugin-assistant
