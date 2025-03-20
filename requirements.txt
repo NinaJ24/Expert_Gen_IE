@@ -13,4 +13,4 @@ langchain_openai
 unstructured 
 langchain-text-splitters
 pinecone
-
+pinecone_plugins.assistant
