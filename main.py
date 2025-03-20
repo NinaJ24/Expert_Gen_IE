@@ -4,7 +4,8 @@ import time
 from dotenv import load_dotenv
 # import threading  # 导入 threading 模块
 # import logging    # 导入 logging 模块
-from pinecone_plugins.assistant.models.chat import Message
+# from pinecone_plugins.assistant.models.chat import Message
+from pinecone import Message
 from pinecone import Pinecone
 
 
