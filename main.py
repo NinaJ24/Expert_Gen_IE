@@ -98,8 +98,8 @@ if prompt := st.chat_input("Ask your query about human factors, safety engineeri
     # answer = get_response_content(prompt)
     answer = get_response_content(enhanced_prompt)
 
-    # Update the placeholder with the actual response
-    thinking_placeholder.markdown(answer)
+    # # Update the placeholder with the actual response
+    # thinking_placeholder.markdown(answer)
 
-    # Add assistant response to chat history
-    st.session_state.messages.append({"role": "assistant", "content": answer})
+    # # Add assistant response to chat history
+    # st.session_state.messages.append({"role": "assistant", "content": answer})
