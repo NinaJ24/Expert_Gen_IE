@@ -2,9 +2,7 @@ import streamlit as st
 import random
 import time
 from dotenv import load_dotenv
-# import threading  # 导入 threading 模块
-# import logging    # 导入 logging 模块
-# from pinecone_plugins.assistant.models.chat import Message
+
 from pinecone_plugins.assistant.models.chat import Message
 # from pinecone import Message
 from pinecone import Pinecone
@@ -188,22 +186,6 @@ if uploaded_file:
     st.session_state.uploaded_file = uploaded_file
 
 
-# # Accept user input
-# if prompt := st.chat_input("Ask your query about human factors, safety engineering, and applied ergonomics. "):
-#     # Add user message to chat history
-#     st.session_state.messages.append({"role": "user", "content": prompt})
-#     # Display user message in chat message container
-#     with st.chat_message("user"):
-#         st.markdown(prompt)
-#     answer = get_response_content(prompt)
-#     # Display assistant response in chat message container
-#     with st.chat_message("assistant"):
-#         # response = st.write_stream(response_generator())
-#         st.markdown(answer)
-#     # Add assistant response to chat history
-#     # st.session_state.messages.append({"role": "assistant", "content": response})
-#     st.session_state.messages.append({"role": "assistant", "content": answer})
-
 if prompt := st.chat_input("Ask your query about human factors, safety engineering, and applied ergonomics."):
     # Add user message to chat history
     # st.session_state.messages.append({"role": "user", "content": prompt})
@@ -229,22 +211,4 @@ if prompt := st.chat_input("Ask your query about human factors, safety engineeri
         answer = get_response_content(enhanced_prompt)
         thinking_placeholder.markdown(answer)  # <- update inside the same context
         st.session_state.messages.append({"role": "assistant", "content": answer})  # <- save to history
-#     # 👇 append upload control at the very end
-#     uploaded_file = st.file_uploader(
-#     # "Upload an image or paste from clipboard",
-#     "Upload an image",
-#     type=["png", "jpg", "jpeg"],
-#     key=st.session_state["uploader_key"]
-# )
-#     if uploaded_file:
-#     st.session_state.uploaded_file = uploaded_file
 
-    # Generate actual response
-    # answer = get_response_content(prompt)
-    # answer = get_response_content(enhanced_prompt)
-
-    # # Update the placeholder with the actual response
-    # thinking_placeholder.markdown(answer)
-
-    # # Add assistant response to chat history
-    # st.session_state.messages.append({"role": "assistant", "content": answer})
