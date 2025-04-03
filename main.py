@@ -176,16 +176,16 @@ for message in st.session_state.messages:
 if "uploader_key" not in st.session_state:
     st.session_state["uploader_key"] = 0
 
-uploaded_file = st.file_uploader(
-    # "Upload an image or paste from clipboard",
-    "Upload an image",
-    type=["png", "jpg", "jpeg"],
-    key=st.session_state["uploader_key"]
-)
-# -------0403原来得上传
+# uploaded_file = st.file_uploader(
+#     # "Upload an image or paste from clipboard",
+#     "Upload an image",
+#     type=["png", "jpg", "jpeg"],
+#     key=st.session_state["uploader_key"]
+# )
+# # -------0403原来得上传
 
-if uploaded_file:
-    st.session_state.uploaded_file = uploaded_file
+# if uploaded_file:
+#     st.session_state.uploaded_file = uploaded_file
 
 
 # # Accept user input
@@ -236,6 +236,8 @@ if prompt := st.chat_input("Ask your query about human factors, safety engineeri
     type=["png", "jpg", "jpeg"],
     key=st.session_state["uploader_key"]
 )
+    if uploaded_file:
+    st.session_state.uploaded_file = uploaded_file
 
     # Generate actual response
     # answer = get_response_content(prompt)
